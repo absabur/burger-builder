@@ -58,6 +58,15 @@ export const authCheck = () => dispatch => {
     }
 }
 
+export const logout = () => {
+    localStorage.removeItem('token-burger')
+    localStorage.removeItem('userId-burger')
+    localStorage.removeItem('expires-burger')
+    return {
+        type: constance.AUTHLOGOUT
+    }
+}
+
 export const authLoading = (isLoading) => {
     return {
         type: constance.AUTHLOADING,
@@ -69,14 +78,5 @@ export const authError = (msg) => {
     return {
         type: constance.AUTHFAIELD,
         payload: msg,
-    }
-}
-
-export const logout = () => {
-    localStorage.removeItem('token-burger')
-    localStorage.removeItem('userId-burger')
-    localStorage.removeItem('expires-burger')
-    return {
-        type: constance.AUTHLOGOUT
     }
 }

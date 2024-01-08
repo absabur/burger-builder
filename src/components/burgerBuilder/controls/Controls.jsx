@@ -3,9 +3,9 @@ import { Button, Card, CardBody, CardFooter, CardHeader } from "reactstrap";
 
 const controls = [
   { label: "Cheese", type: "cheese" },
-  { label: "Cucumber", type: "cucom" },
+  { label: "Cucumber", type: "cucumber" },
   { label: "Tomato", type: "tomato" },
-  { label: "Vegitable", type: "veg" },
+  { label: "Vegitable", type: "vegitable" },
   { label: "Onion", type: "onion" },
   { label: "Meat", type: "meat" },
 ];
@@ -15,7 +15,7 @@ const BuildControl = (props) => {
     <div style={{display: 'flex', alignItems: 'center', justifyContent: "space-between"}}>
       <div className="mr-auto ml-5" style={{fontSize: '20px', fontWeight: "600"}}>{props.label}</div>
       <div className="mt-2">
-        <button onClick={()=> props.remove(props.type)} className="btn btn-sm-1 btn-secondary" style={{marginLeft: "5px", fontSize: "20px", fontWeight: "800", width: "40px"}}>-</button>
+        <button onClick={()=> props.remove(props.type)} className="btn btn-sm-1 btn-secondary" style={{marginLeft: "5px", fontSize: "20px", fontWeight: "800", width: "40px"}}>–</button>
         <button onClick={()=> props.add(props.type)} className="btn btn-sm-1" style={{background: 'tomato', color: 'white', marginLeft: "5px", fontSize: "20px", fontWeight: "800", width: "40px"}}>+</button>
       </div>
     </div>

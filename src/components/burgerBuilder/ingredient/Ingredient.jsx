@@ -24,10 +24,10 @@ const Ingredient = (props) => {
         case 'onion':
             ingredient = <div><img src={Onion} alt={props.type}/></div>
             break;
-        case 'veg':
+        case 'vegitable':
             ingredient = <div><img src={Veg} alt={props.type}/></div>
             break;
-        case 'cucom':
+        case 'cucumber':
             ingredient = <div><img src={Cucom} alt={props.type}/></div>
             break;
         case 'meat':

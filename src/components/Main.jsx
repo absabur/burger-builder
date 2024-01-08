@@ -9,6 +9,7 @@ import { connect } from "react-redux";
 import { authCheck } from "../redux/authAction.js";
 import Logout from "./auth/Logout.jsx";
 import LoadingPage from "./loading/LoadingPage.jsx";
+import Footer from "./footer/Footer.jsx";
 
 const mapStateToProps = (state) => {
   return {
@@ -57,10 +58,11 @@ class Main extends Component {
       );
     }
     return (
-      <div>
+      <div style={{width: "100vw", minHeight: "100vh"}}>
         <Header />
         {this.state.loaded && routes}
         {!this.state.loaded && <LoadingPage />}
+        <Footer />
       </div>
     );
   }
