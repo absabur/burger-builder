@@ -1,0 +1,23 @@
+form span{
+    font-size: 15px;
+    animation: invalid 2s ease-in-out infinite;
+}
+
+
+@keyframes invalid {
+    100% {
+      color: red;
+    }
+    75% {
+      color: tomato;
+    }
+    50% {
+      color: red;
+    }
+    25% {
+      color: tomato;
+    }
+    0% {
+      color: red;
+    }
+  }

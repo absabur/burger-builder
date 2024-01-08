@@ -1,0 +1,15 @@
+.ingredient {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
+
+.ingredient div {
+    width: 100%;
+    height: max-content;
+    margin: -60px 0;
+}
+
+.ingredient img {
+    width: 80%;
+}
