@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Burger from "../burgerBuilder/burger/Burger";
 import { Modal, ModalBody, ModalHeader } from "reactstrap";
-import format from "date-format";
+import date from 'date-and-time';
 
 const Order = ({ order }) => {
   const [modal, setmodal] = useState(false);
@@ -15,6 +15,7 @@ const Order = ({ order }) => {
       b.push({ type: item.type, quantity: 1 });
     }
   });
+  let orderDate = date.format(new Date(order.orderTime), 'ddd, MMM DD YYYY, hh:mm A')
 
   return (
     <div
@@ -32,10 +33,7 @@ const Order = ({ order }) => {
         <p>Order Id: {order.id}</p>
         <p>
           Placed On:{" "}
-          {format.asString(
-            "Date: dd-MM-yyyy  |  Time: hh:mm",
-            new Date(order.orderTime)
-          )}
+          {orderDate}
         </p>
         <div
           style={{
