@@ -24,7 +24,7 @@ const BuildControl = (props) => {
 
 const Controls = (props) => {
   return (
-    <div className="container ml-md-5 " style={{ textAlign: "center", maxWidth: "500px" }}>
+    <div className="container ml-md-5 " style={{ textAlign: "center", maxWidth: "450px", margin: "0 auto" }}>
       <Card className="mt-4 mb-4" style={{ textAlign: "center" }}>
         <CardHeader
           style={{

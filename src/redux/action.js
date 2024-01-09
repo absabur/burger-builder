@@ -21,6 +21,13 @@ export const resetIngredient = () => {
   };
 };
 
+
+export const checkOut = () => {
+  return {
+    type: "checkOut",
+  };
+};
+
 export const handleCheckOut = () => {
   return {
     type: constance.CHECKOUT,

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { Button, Modal, ModalBody } from "reactstrap";
 import LoadingPage from "../../loading/LoadingPage";
-import { fetchOrders, resetIngredient } from "../../../redux/action";
+import { fetchOrders, resetIngredient, checkOut } from "../../../redux/action";
 
 const mapStateToProps = (state) => {
   return {
@@ -20,6 +20,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     resetIngredient: () => dispatch(resetIngredient()),
     getOrders: (token, userId) => dispatch(fetchOrders(token, userId)),
+    checkOut: () => dispatch(checkOut()),
   };
 }
 
@@ -39,6 +40,7 @@ class Checkout extends Component {
     this.setState({
       goback: true,
     });
+    this.props.checkOut();
   };
   handleChange = (e) => {
     this.setState({

@@ -102,7 +102,7 @@ const Order = ({ order }) => {
           Order Id: {order.id}
         </ModalHeader>
         <ModalBody style={{zIndex:"0"}}>
-          <div style={{ padding: "10px" }}>
+          <div>
             <Burger ingredients={order.ingredients} />
           </div>
           <button

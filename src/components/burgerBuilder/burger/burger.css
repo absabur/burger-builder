@@ -1,6 +1,7 @@
 .burger{
     width: 100%;
-    max-width: 500px;
+    margin: auto;
+    max-width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,6 +17,7 @@
 .topBread, .bottomBread{
     position: absolute;
     z-index: -1;
+    width: 100%;
 }
 .topBread{
     top: 40px;
@@ -34,3 +36,4 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+

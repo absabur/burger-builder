@@ -14,7 +14,7 @@ const Header = (props) => {
   let link = null;
   if (props.token === null) {
     link = (
-      <Nav className="mr-md-5">
+      <Nav className="mr-md-5 m-auto">
         <NavItem>
           <NavLink className="NavLink" to="/burger-builder">
             Home
@@ -27,7 +27,7 @@ const Header = (props) => {
     );
   } else {
     link = (
-      <Nav className="mr-md-5">
+      <Nav className="mr-md-5 m-auto">
         <NavItem>
           <NavLink className="NavLink" to="/burger-builder">
             Home
@@ -46,7 +46,7 @@ const Header = (props) => {
   return (
     <div className="Navigation">
       <Navbar className="navbar">
-        <NavLink className="mr-auto ml-md-5 Brand" to="/">
+        <NavLink className="m-auto ml-md-5 Brand" to="/">
           <img src={logo} alt="logo" className="logo" width={80} />
         </NavLink>
         {link}

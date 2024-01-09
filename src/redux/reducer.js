@@ -60,6 +60,11 @@ export const reducer = (state = initialState, action) => {
         totalPrice: 80,
         maxLimit: null,
       };
+    case "checkOut":
+      return {
+        ...state,
+        checkout: false,
+      };
     case constance.CHECKOUT:
       return {
         ...state,
