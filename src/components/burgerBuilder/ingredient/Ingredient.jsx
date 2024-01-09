@@ -13,10 +13,10 @@ const Ingredient = (props) => {
     let ingredient = null
     switch (props.type) {
         case 'bread-top':
-            ingredient = <div style={{margin: "0"}}><img src={BreadTop} alt={props.type}/></div>
+            ingredient = <div style={{margin: "2rem 0"}}><img src={BreadTop} alt={props.type}/></div>
             break;
         case 'bread-bottom':
-            ingredient = <div style={{margin: "0"}}><img src={BreadBottom} alt={props.type}/></div>
+            ingredient = <div style={{margin: "2.5rem 0"}}><img src={BreadBottom} alt={props.type}/></div>
             break;
             case 'tomato':
             ingredient = <div><img src={Tomato} alt={props.type}/></div>

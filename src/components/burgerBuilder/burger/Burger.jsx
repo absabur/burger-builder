@@ -8,7 +8,7 @@ const Burger = (props) => {
   });
   ingredientArray.reverse();
   if (ingredientArray.length <= 0) {
-    ingredientArray = <h3>Add Some Ingredient!</h3>;
+    ingredientArray = <h3 style={{margin: "-2rem 0"}}>Add Some Ingredient!</h3>;
   }
   return (
     <div className="burger">

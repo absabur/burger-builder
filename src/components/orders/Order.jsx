@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Burger from "../burgerBuilder/burger/Burger";
 import { Modal, ModalHeader } from "reactstrap";
+import format from 'date-format'
 
 const Order = ({ order }) => {
   const [modal, setmodal] = useState(false);
   let b = [];
-
   order.ingredients.forEach((item) => {
     let existingItem = b.find((i) => i.type === item.type);
 
@@ -30,7 +30,7 @@ const Order = ({ order }) => {
     >
       <div>
         <p>Order Id: {order.id}</p>
-        <p>Order Time: {order.orderTime}</p>
+        <p>Placed On: {format.asString('Date: dd-MM-yyyy  |  Time: hh:mm',new Date(order.orderTime))}</p>
         <div
           style={{
             display: "flex",

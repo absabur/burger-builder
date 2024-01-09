@@ -1,5 +1,6 @@
 .burger{
     width: 100%;
+    max-width: 500px;
     margin: auto;
     overflow-y: scroll;
     text-align: center;

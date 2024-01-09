@@ -23,17 +23,16 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-
 class Main extends Component {
   state = {
     loaded: false,
-  }
+  };
   componentDidMount = () => {
     this.props.auth();
     this.setState({
       loaded: true,
-    })
-  }
+    });
+  };
   render() {
     let routes = null;
     if (this.props.token === null) {
@@ -42,7 +41,7 @@ class Main extends Component {
           <Route path="/login" element={<Auth />} />
           <Route path="/" element={<Navigate to="/burger-builder" />} />
           <Route path="/burger-builder" element={<BurgerBuilder />} />
-          <Route path="*" element={<Navigate to="/"/>} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       );
     } else {
@@ -53,15 +52,24 @@ class Main extends Component {
           <Route path="/order" element={<Orders />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/logout" element={<Logout />} />
-          <Route path="*" element={<Navigate to="/"/>} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       );
     }
     return (
-      <div style={{width: "100vw", minHeight: "100vh"}}>
+      <div
+        style={{
+          width: "100vw",
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         <Header />
-        {this.state.loaded && routes}
-        {!this.state.loaded && <LoadingPage />}
+        <div style={{ flex: "1", marginBottom: "2rem" }}>
+          {this.state.loaded && routes}
+          {!this.state.loaded && <LoadingPage />}
+        </div>
         <Footer />
       </div>
     );
