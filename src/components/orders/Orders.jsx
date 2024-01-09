@@ -28,7 +28,7 @@ export class Orders extends Component {
         {this.props.loading ? <LoadingPage /> : <>
           {this.props.error ? <h1 style={{textAlign: "center"}}>{this.props.error}<br />Couldn't Load Orders</h1> : <>
             {this.props.orders.length === 0 && <h1 style={{textAlign: 'center'}}>You Have No Order</h1>}
-            {this.props.orders.map(item => (
+            {this.props.orders.reverse().map(item => (
               <Order key={item.id} order={item}/>
             ))}
           </>}
