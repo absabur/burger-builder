@@ -1,11 +1,30 @@
 .burger{
     width: 100%;
     max-width: 500px;
-    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     overflow-y: scroll;
     text-align: center;
     font-weight: bold;
-    font-size: 1.2rem;
+    height: max-content;
+    padding: 4.5rem 0;
+    position: relative;
+}
+
+.topBread, .bottomBread{
+    position: absolute;
+    z-index: -1;
+}
+.topBread{
+    top: 40px;
+}
+.bottomBread{
+    bottom: 40px;
+}
+.fakediv{
+    height: 45px;
 }
 
 .burger::-webkit-scrollbar{

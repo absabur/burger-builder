@@ -4,14 +4,15 @@
     height: 100%;
 }
 
-.ingredient div {
+.ingredient div{
     width: 100%;
-    height: 100px;
-    margin: -60px 0;
+    height: 55px;
+    margin: -10px 0;
 }
 
 .ingredient img {
     width: 350px;
     height: 100%;
     object-fit: fill;
+    margin: 0;
 }

@@ -80,7 +80,7 @@ export class BurgerBuilder extends Component {
           >
             Your Order
           </ModalHeader>
-          <ModalBody>
+          <ModalBody style={{zIndex:"0"}}>
             <Summary
               ingredPrice={this.props.ingredPrice}
               ingredients={this.props.ingredients}

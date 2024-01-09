@@ -8,13 +8,31 @@ const Burger = (props) => {
   });
   ingredientArray.reverse();
   if (ingredientArray.length <= 0) {
-    ingredientArray = <h3 style={{margin: "-2rem 0"}}>Add Some Ingredient!</h3>;
+    ingredientArray = (
+      <h3
+        style={{
+          borderRadius: "5px",
+          margin: "1rem 0",
+          background: "rgba(0,0,0,0.5)",
+          padding: "3px",
+          color: "white",
+        }}
+      >
+        Add Some Ingredient!
+      </h3>
+    );
   }
   return (
     <div className="burger">
-      <Ingredient type="bread-top" />
+      <div className="topBread">
+        <Ingredient type="bread-top" />
+      </div>
+      <div className="fakediv"></div>
       {ingredientArray}
-      <Ingredient type="bread-bottom" />
+      <div className="fakediv"></div>
+      <div className="bottomBread">
+        <Ingredient type="bread-bottom" />
+      </div>
     </div>
   );
 };
